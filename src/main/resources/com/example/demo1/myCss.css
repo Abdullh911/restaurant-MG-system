@@ -1,0 +1,17 @@
+*{
+
+}
+.sidebarBtn{
+    -fx-background-color:#FFFFFF;
+    -fx-background-radius:15px;
+}
+.sidebarBtn:hover {
+    -fx-background-color: #f9f1f1;
+}
+#main{
+    -fx-background-color: #DC143C;
+}
+#sidebar{
+    -fx-background-color:#ae362e;
+    -fx-background-radius:0px 15px 15px 0px;
+}

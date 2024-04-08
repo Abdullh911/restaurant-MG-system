@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox id="sidebar" prefHeight="400.0" prefWidth="150.0" stylesheets="@myCss.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.SceneController">
+    <children>
+      <ImageView fitHeight="80.0" fitWidth="187.0" pickOnBounds="true" preserveRatio="true" />
+        <Button minWidth="150.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="150.0" styleClass="sidebarBtn" stylesheets="@myCss.css" text="Make Appointment">
+            <VBox.margin>
+                <Insets bottom="30.0" left="18.0" right="18.0" top="30.0" />
+            </VBox.margin>
+            <font>
+                <Font name="Dubai Medium" size="15.0" />
+            </font>
+        </Button>
+        <Button minWidth="150.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="150.0" styleClass="sidebarBtn" text="Appointments List">
+            <VBox.margin>
+                <Insets bottom="30.0" left="18.0" right="18.0" top="30.0" />
+            </VBox.margin>
+            <font>
+                <Font name="Dubai Medium" size="15.0" />
+            </font>
+        </Button>
+        <Button minWidth="150.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="150.0" styleClass="sidebarBtn" text="Clients">
+            <VBox.margin>
+                <Insets bottom="30.0" left="18.0" right="18.0" top="30.0" />
+            </VBox.margin>
+            <font>
+                <Font name="Dubai Medium" size="15.0" />
+            </font>
+        </Button>
+        <Button minWidth="150.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="150.0" styleClass="sidebarBtn" text="Stats">
+            <VBox.margin>
+                <Insets bottom="30.0" left="18.0" right="18.0" top="30.0" />
+            </VBox.margin>
+            <font>
+                <Font name="Dubai Medium" size="15.0" />
+            </font>
+        </Button>
+        <Button mnemonicParsing="false" text="Settings">
+            <VBox.margin>
+                <Insets bottom="18.0" left="65.0" right="18.0" top="18.0" />
+            </VBox.margin>
+        </Button>
+    </children>
+    <VBox.margin>
+        <Insets />
+    </VBox.margin>
+</VBox>
