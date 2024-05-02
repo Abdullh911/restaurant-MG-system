@@ -15,10 +15,7 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.ResourceBundle;
+import java.util.*;
 
 public class ClientsController implements Initializable {
     @FXML
@@ -92,6 +89,9 @@ public class ClientsController implements Initializable {
         tableView.setItems(filteredData);
     }
     private void showPopup(String name, ArrayList<Appointment> appointments) {
+        // Sort appointments in descending order based on date
+        Collections.sort(appointments, (a1, a2) -> a2.getDate().compareTo(a1.getDate()));
+
         Stage popupStage = new Stage();
         popupStage.initModality(Modality.APPLICATION_MODAL);
         popupStage.setTitle("Appointments for " + name);
@@ -99,7 +99,9 @@ public class ClientsController implements Initializable {
         ListView<String> listView = new ListView<>();
         ObservableList<String> items = listView.getItems();
         for (Appointment appointment : appointments) {
-            String item = "Date: " + appointment.getDate() + ", Time: " + appointment.getTime()+ ", Services: " + appointment.getSelectedServices()+ ", Price: " + appointment.getPrice()+ ", Tips: " + appointment.getTip();
+            String item = "Date: " + appointment.getDate() + ", Time: " + appointment.getTime() +
+                    ", Services: " + appointment.getSelectedServices() + ", Price: " + appointment.getPrice() +
+                    ", Tips: " + appointment.getTip();
             items.add(item);
         }
 
