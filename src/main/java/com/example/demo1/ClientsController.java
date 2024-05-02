@@ -89,9 +89,7 @@ public class ClientsController implements Initializable {
         tableView.setItems(filteredData);
     }
     private void showPopup(String name, ArrayList<Appointment> appointments) {
-        // Sort appointments in descending order based on date
         Collections.sort(appointments, (a1, a2) -> a2.getDate().compareTo(a1.getDate()));
-
         Stage popupStage = new Stage();
         popupStage.initModality(Modality.APPLICATION_MODAL);
         popupStage.setTitle("Appointments for " + name);
