@@ -3,7 +3,7 @@
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.Scene2Controller">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.MakeAppointmentController">
    <children>
       <ListView fx:id="texts" layoutX="359.0" layoutY="14.0" prefHeight="277.0" prefWidth="226.0" />
       <ListView fx:id="selected" layoutX="123.0" layoutY="14.0" prefHeight="277.0" prefWidth="226.0" />

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="805.0" prefWidth="1030.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.AppointmentListController">
+    <left>
+        <fx:include source="sidebar.fxml" />
+    </left>
+    <center>
+        <VBox prefHeight="442.0" prefWidth="442.0" BorderPane.alignment="CENTER">
+            <children>
+                <TableView fx:id="tableView" prefHeight="826.0" prefWidth="843.0">
+                    <columns>
+                        <TableColumn fx:id="nameColumn" prefWidth="150.0" text="Name" />
+                        <TableColumn fx:id="numberColumn" prefWidth="150.0" text="Number" />
+                        <TableColumn fx:id="selectedServicesColumn" prefWidth="119.99993896484375" text="Selected Services" />
+                        <TableColumn fx:id="dateColumn" prefWidth="111.199951171875" text="Date" />
+                  <TableColumn fx:id="timeColumn" prefWidth="75.0" text="Time" />
+                        <TableColumn fx:id="priceColumn" prefWidth="83.19989013671875" text="Price" />
+                  <TableColumn fx:id="tipsColumn" prefWidth="75.0" text="Tips" />
+                    </columns>
+                </TableView>
+            </children>
+        </VBox>
+    </center>
+</BorderPane>

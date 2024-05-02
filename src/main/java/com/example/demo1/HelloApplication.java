@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.geometry.Rectangle2D;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
 
@@ -15,13 +16,10 @@ public class HelloApplication extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
         Parent root = fxmlLoader.load();
-
-        // Load external CSS file
         String css = getClass().getResource("myCss.css").toExternalForm();
         root.getStylesheets().add(css);
-
         Scene scene = new Scene(root, 600, 600);
-        stage.setTitle("Hello!");
+        stage.setTitle("MG Management App");
         stage.setScene(scene);
         stage.show();
     }

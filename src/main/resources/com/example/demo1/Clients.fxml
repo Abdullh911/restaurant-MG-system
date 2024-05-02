@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="684.0" prefWidth="792.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.ClientsController">
+    <left>
+        <fx:include source="sidebar.fxml" />
+    </left>
+    <center>
+      <VBox prefHeight="613.0" prefWidth="605.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="170.0" prefWidth="605.0">
+               <children>
+                  <Pane prefHeight="111.0" prefWidth="605.0">
+                     <children>
+                        <TextField fx:id="search" layoutX="92.0" layoutY="69.0" prefHeight="40.0" prefWidth="231.0" />
+                        <Label layoutX="259.0" layoutY="6.0" text="Clients">
+                           <font>
+                              <Font name="System Bold Italic" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="9.0" layoutY="71.0" text="Search">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </VBox>
+            <TableView fx:id="tableView" prefHeight="604.0" prefWidth="605.0">
+              <columns>
+                <TableColumn fx:id="nameColumn" prefWidth="142.39996641874313" text="Name" />
+                <TableColumn fx:id="numberColumn" prefWidth="159.19993591308594" text="Number" />
+                  <TableColumn fx:id="numOfVisitsColumn" minWidth="0.0" prefWidth="148.0" text="Number of visits" />
+                  <TableColumn fx:id="lastVisit" prefWidth="154.4000366210937" text="Last Visit" />
+              </columns>
+            </TableView>
+         </children></VBox>
+   </center>
+</BorderPane>

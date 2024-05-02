@@ -1,14 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.SceneController">
+<AnchorPane prefHeight="546.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.AppointmentListController">
     <children>
-        <Label layoutX="236.0" layoutY="50.0" prefHeight="38.0" prefWidth="126.0" text="This Is Scene 1">
+        <TextField fx:id="editTimeH" layoutX="118.0" layoutY="101.0" prefHeight="38.0" prefWidth="36.0" />
+        <TextField fx:id="editTimeM" layoutX="183.0" layoutY="100.0" prefHeight="38.0" prefWidth="36.0" />
+        <Label layoutX="160.0" layoutY="93.0" text=":">
             <font>
-                <Font name="Dubai Regular" size="18.0" />
+                <Font name="System Bold" size="36.0" />
+            </font>
+        </Label>
+        <ChoiceBox fx:id="editAmPm" layoutX="228.0" layoutY="101.0" prefHeight="38.0" prefWidth="56.0" />
+        <DatePicker fx:id="editDate" layoutX="115.0" layoutY="56.0" prefHeight="26.0" prefWidth="172.0" />
+        <TextField fx:id="editPrice" layoutX="118.0" layoutY="343.0" prefHeight="38.0" prefWidth="172.0" />
+        <Label layoutX="300.0" layoutY="344.0" text="LE">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+        <TextField fx:id="editTips" layoutX="118.0" layoutY="401.0" prefHeight="38.0" prefWidth="172.0" />
+        <Label layoutX="300.0" layoutY="402.0" text="LE">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+        <Label layoutX="14.0" layoutY="14.0" text="Edit Appointment">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+        <Button layoutX="245.0" layoutY="461.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="134.0" text="SAVE" />
+        <Button layoutX="402.0" layoutY="461.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="183.0" text="CANCEL APPOINTMENT" textFill="#ec0000">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Button>
+        <Label layoutX="20.0" layoutY="55.0" text="DATE">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <Label layoutX="20.0" layoutY="106.0" text="Time">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <Label layoutX="20.0" layoutY="163.0" text="Services">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <Label layoutX="20.0" layoutY="348.0" text="Price">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <Label layoutX="20.0" layoutY="406.0" text="Tips">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <ListView fx:id="currServices" layoutX="116.0" layoutY="163.0" prefHeight="150.0" prefWidth="200.0" />
+        <ListView fx:id="newServices" layoutX="402.0" layoutY="163.0" prefHeight="150.0" prefWidth="208.0" />
+        <Label layoutX="326.0" layoutY="163.0" text="Added">
+            <font>
+                <Font name="System Bold" size="18.0" />
             </font>
         </Label>
     </children>
