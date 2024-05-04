@@ -147,7 +147,8 @@ public class SceneController {
             contentStream.setFont(PDType1Font.HELVETICA, 10);
 
             float yOffset = 0;
-            int total = 0,maxDay=-1,minDay=Integer.MAX_VALUE;
+            int total = 0,maxDay=0,minDay=Integer.MAX_VALUE;
+            String min="",max="";
             for (Map.Entry<String, Integer> entry : revenuePerDay.entrySet()) {
 
                 if (yOffset < contentHeight - 50) {
@@ -169,11 +170,23 @@ public class SceneController {
                     contentStream.setFont(PDType1Font.HELVETICA, 10);
                     yOffset = 0;
                 }
-                minDay=Math.min(minDay,entry.getValue());
-                maxDay=Math.max(maxDay,entry.getValue());
+                if(minDay>entry.getValue()){
+                    minDay=entry.getValue();
+                    min=entry.getKey();
+                }
+                if(maxDay<entry.getValue()){
+                    maxDay=entry.getValue();
+                    max=entry.getKey();
+                }
                 total += entry.getValue();
             }
-            int avg=total/revenuePerDay.size();
+            int avg=0;
+            if(revenuePerDay.size()>0){
+                avg=total/revenuePerDay.size();
+            }
+            else{
+                minDay=0;
+            }
             contentStream.endText();
 
             contentStream.moveTo(20, contentHeight - yOffset);
@@ -185,9 +198,9 @@ public class SceneController {
             contentStream.newLineAtOffset(20, contentHeight - yOffset - 15);
             contentStream.showText("Total Revenue " + total + " EGP");
             contentStream.newLineAtOffset(0, -15);
-            contentStream.showText("Lowest Revenue " + minDay + " EGP");
+            contentStream.showText("Lowest Revenue " + minDay + " EGP ("+min+")");
             contentStream.newLineAtOffset(0, -15);
-            contentStream.showText("Highest Revenue " + maxDay + " EGP");
+            contentStream.showText("Highest Revenue " + maxDay + " EGP ("+max+")");
             contentStream.newLineAtOffset(0, -15);
             contentStream.showText("Average Revenue " + avg + " EGP");
             contentStream.newLineAtOffset(0, -15);

@@ -72,8 +72,8 @@
                         <Font name="System Bold Italic" size="24.0" />
                      </font>
                   </Label>
-                  <ListView fx:id="Added" layoutX="5.0" layoutY="269.0" prefHeight="192.0" prefWidth="1399.0" styleClass="services" />
-                  <ScrollPane fx:id="buttonContainer" hbarPolicy="NEVER" layoutX="5.0" layoutY="81.0" prefHeight="153.0" prefWidth="1376.0" />
+                  <ListView fx:id="Added" layoutX="5.0" layoutY="269.0" prefHeight="192.0" prefWidth="1345.0" styleClass="services" />
+                  <ScrollPane fx:id="buttonContainer" hbarPolicy="NEVER" layoutX="5.0" layoutY="81.0" prefHeight="153.0" prefWidth="1336.0" />
                </children></Pane>
             <Pane prefHeight="328.0" prefWidth="1416.0">
                <children>

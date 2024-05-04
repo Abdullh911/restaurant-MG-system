@@ -47,7 +47,7 @@ public class EditController implements Initializable {
 
     private void handleAvailableListViewClick() {
         String selectedItem = available.getSelectionModel().getSelectedItem();
-        if (selectedItem != null && !selected.contains(selectedItem)) {
+        if (selectedItem != null) {
             selected.add(selectedItem);
             added.getItems().setAll(selected);
         }

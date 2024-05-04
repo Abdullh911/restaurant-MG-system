@@ -82,9 +82,9 @@ public class MakeAppointmentController implements Initializable {
     private void handleButtonClick(String text) {
         normalizeAdded();
         System.out.println("Button clicked: " + text);
-        if (!selectedServices.contains(text)) {
-            selectedServices.add(text);
-        }
+
+        selectedServices.add(text);
+
         Added.getItems().clear();
         Added.getItems().setAll(selectedServices);
     }
