@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane prefHeight="805.0" prefWidth="1030.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.AppointmentListController">
+<BorderPane prefHeight="933.0" prefWidth="1371.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.AppointmentListController">
     <left>
         <fx:include source="sidebar.fxml" />
     </left>
@@ -14,13 +14,18 @@
             <children>
                 <TableView fx:id="tableView" prefHeight="794.0" prefWidth="843.0">
                     <columns>
-                        <TableColumn fx:id="nameColumn" prefWidth="150.0" text="Name" />
-                        <TableColumn fx:id="numberColumn" prefWidth="150.0" text="Number" />
-                        <TableColumn fx:id="selectedServicesColumn" prefWidth="119.99993896484375" text="Selected Services" />
-                        <TableColumn fx:id="dateColumn" prefWidth="111.199951171875" text="Date" />
-                  <TableColumn fx:id="timeColumn" prefWidth="75.0" text="Time" />
-                        <TableColumn fx:id="priceColumn" prefWidth="83.19989013671875" text="Price" />
-                  <TableColumn fx:id="tipsColumn" prefWidth="75.0" text="Tips" />
+                        <TableColumn fx:id="nameColumn" maxWidth="60.0" prefWidth="98.3999816775322" text="رقم الوردر" />
+                        <TableColumn fx:id="selectedServicesColumn" minWidth="200.0" prefWidth="116.80001831054688" text="الاصناف المختارة" />
+                        <TableColumn fx:id="dateColumn" minWidth="100.0" prefWidth="57.59996032714844" text="التاريخ" />
+                        <TableColumn fx:id="timeColumn" minWidth="20.0" prefWidth="74.39996337890625" text="الوقت" />
+                        <TableColumn fx:id="priceColumn" prefWidth="80.79998779296875" text="السعر" />
+                        <TableColumn fx:id="commentColumn" minWidth="100.0" prefWidth="75.20001220703125" text="اضافات" />
+                        <TableColumn fx:id="paymentTypeColumn" prefWidth="86.4000244140625" text="طريقة الدفع" /> <!-- Updated ID -->
+                        <TableColumn fx:id="customerNameColumn" minWidth="70.0" prefWidth="65.5999755859375" text="الاسم" /> <!-- Updated ID -->
+                        <TableColumn fx:id="numberColumn" minWidth="100.0" prefWidth="76.0" text="رقم الهاتف" />
+                        <TableColumn fx:id="addressColumn" minWidth="200.0" prefWidth="68.0" text="العنوان" /> <!-- Updated ID -->
+                        <TableColumn fx:id="tableNumberColumn" prefWidth="46.39990234375" text="رقم الترابيزة" />
+                  <TableColumn fx:id="typeColumn" prefWidth="75.0" text="نوع الاوردر" /> <!-- Updated ID -->
                     </columns>
                 </TableView>
             </children>

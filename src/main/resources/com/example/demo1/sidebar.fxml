@@ -2,8 +2,6 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
@@ -14,14 +12,14 @@
     <children>
       <Pane prefHeight="227.0" prefWidth="187.0">
          <children>
-            <ImageView fitHeight="112.0" fitWidth="140.0" layoutX="24.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="266.0" fitWidth="242.0" layoutX="-27.0" layoutY="-49.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@pic.jpg" />
+                  <Image url="@logoz.png" />
                </image>
             </ImageView>
          </children>
       </Pane>
-        <Button minWidth="150.0" mnemonicParsing="false" onAction="#SwitchMakeAppointment" prefHeight="150.0" prefWidth="150.0" styleClass="sidebarBtn" stylesheets="@myCss.css" text="Create Appointment">
+        <Button minWidth="150.0" mnemonicParsing="false" onAction="#SwitchMakeAppointment" prefHeight="150.0" prefWidth="150.0" styleClass="sidebarBtn" stylesheets="@myCss.css" text="اوردر جديد">
             <VBox.margin>
                 <Insets bottom="30.0" left="18.0" right="18.0" top="30.0" />
             </VBox.margin>
@@ -29,7 +27,7 @@
                 <Font name="Dubai Medium" size="15.0" />
             </font>
         </Button>
-        <Button minWidth="150.0" mnemonicParsing="false" onAction="#SwitchAppointmentList" prefHeight="150.0" prefWidth="150.0" styleClass="sidebarBtn" text="Appointments List">
+        <Button minWidth="150.0" mnemonicParsing="false" onAction="#SwitchAppointmentList" prefHeight="150.0" prefWidth="150.0" styleClass="sidebarBtn" text="جميع الاوردرات">
             <VBox.margin>
                 <Insets bottom="30.0" left="18.0" right="18.0" top="30.0" />
             </VBox.margin>
@@ -37,7 +35,7 @@
                 <Font name="Dubai Medium" size="15.0" />
             </font>
         </Button>
-        <Button minWidth="150.0" mnemonicParsing="false" onAction="#SwitchClients" prefHeight="150.0" prefWidth="150.0" styleClass="sidebarBtn" text="Clients">
+        <Button minWidth="150.0" mnemonicParsing="false" onAction="#SwitchClients" prefHeight="150.0" prefWidth="150.0" styleClass="sidebarBtn" text="كشف الحساب">
             <VBox.margin>
                 <Insets bottom="30.0" left="18.0" right="18.0" top="30.0" />
             </VBox.margin>
@@ -45,30 +43,8 @@
                 <Font name="Dubai Medium" size="15.0" />
             </font>
         </Button>
-        <Button minWidth="150.0" mnemonicParsing="false" onAction="#SwitchStats" prefHeight="150.0" prefWidth="150.0" styleClass="sidebarBtn" text="Stats">
-            <VBox.margin>
-                <Insets bottom="30.0" left="18.0" right="18.0" top="30.0" />
-            </VBox.margin>
-            <font>
-                <Font name="Dubai Medium" size="15.0" />
-            </font>
-        </Button>
-      <Pane prefHeight="200.0" prefWidth="200.0">
-         <children>
-            <TextField fx:id="lastDays" layoutX="94.0" layoutY="1.0" prefHeight="25.0" prefWidth="59.0" />
-            <Label layoutX="10.0" layoutY="5.0" text="Last Days">
-               <font>
-                  <Font name="System Bold" size="14.0" />
-               </font>
-            </Label>
-         </children>
-      </Pane>
-      <Button minWidth="150.0" mnemonicParsing="false" onAction="#generatePdf" prefHeight="150.0" prefWidth="150.0" styleClass="sidebarBtn" text="Export Revenue">
-         <VBox.margin>
-            <Insets bottom="30.0" left="18.0" right="18.0" top="30.0" />
-         </VBox.margin>
-      </Button>
-        <Button mnemonicParsing="false" onAction="#SwitchSettings" text="Settings">
+      <Pane prefHeight="200.0" prefWidth="200.0" />
+        <Button mnemonicParsing="false" onAction="#SwitchSettings" text="الاعدادات">
             <VBox.margin>
                 <Insets bottom="18.0" left="65.0" right="18.0" top="18.0" />
             </VBox.margin>

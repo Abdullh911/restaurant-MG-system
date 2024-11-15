@@ -14,6 +14,10 @@ module com.example.demo1 {
     requires itextpdf;
     requires org.apache.pdfbox;
     requires com.fasterxml.jackson.datatype.jsr310;
+    requires org.apache.poi.poi;
+    requires org.apache.poi.ooxml;
+    requires java.desktop;
+    requires java.logging;
 
     opens com.example.demo1 to javafx.fxml;
     exports com.example.demo1;

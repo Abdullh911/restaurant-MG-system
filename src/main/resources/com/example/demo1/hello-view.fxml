@@ -2,12 +2,13 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
-<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
@@ -19,96 +20,139 @@
    <center>
       <VBox prefHeight="788.0" prefWidth="803.0" stylesheets="@myCss.css" BorderPane.alignment="CENTER">
          <children>
-            <Pane prefHeight="174.0" prefWidth="1416.0">
+            <Pane prefHeight="1405.0" prefWidth="1416.0">
                <children>
-                  <TextField fx:id="phone" layoutX="14.0" layoutY="87.0" onMouseClicked="#normalizePhone" prefHeight="40.0" prefWidth="187.0" />
-                  <Button layoutX="201.0" layoutY="87.0" mnemonicParsing="false" onAction="#search" prefHeight="40.0" prefWidth="50.0" text="search" />
-                  <TextField fx:id="name" layoutX="269.0" layoutY="87.0" onMouseClicked="#normalizeName" prefHeight="40.0" prefWidth="188.0" />
-                  <Label layoutX="43.0" layoutY="53.0" text="Phone Number">
+                  <ScrollPane fx:id="categoriesScrollPane" hbarPolicy="NEVER" layoutX="14.0" layoutY="56.0" prefHeight="406.0" prefWidth="200.0">
+                     <content>
+                        <VBox fx:id="categoriesPane" />
+                     </content>
+                  </ScrollPane>
+                  <ScrollPane fx:id="itemsScrollPane" hbarPolicy="NEVER" layoutX="235.0" layoutY="56.0" prefHeight="403.0" prefWidth="553.0">
+                     <content>
+                        <FlowPane fx:id="itemsPane" hgap="10" prefWrapLength="850" vgap="10" />
+                     </content>
+                  </ScrollPane>
+                  <Pane layoutX="808.0" layoutY="56.0" prefHeight="289.0" prefWidth="231.0">
+                     <children>
+                        <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#setMultiple" prefHeight="60.0" prefWidth="60.0" styleClass="multiple" text="1" textFill="WHITE">
+                           <font>
+                              <Font size="26.0" />
+                           </font></Button>
+                        <Button layoutX="157.0" layoutY="155.0" mnemonicParsing="false" onAction="#setMultiple" prefHeight="60.0" prefWidth="60.0" styleClass="multiple" text="9" textFill="WHITE">
+                           <font>
+                              <Font size="26.0" />
+                           </font></Button>
+                        <Button layoutX="86.0" layoutY="155.0" mnemonicParsing="false" onAction="#setMultiple" prefHeight="60.0" prefWidth="60.0" styleClass="multiple" text="8" textFill="WHITE">
+                           <font>
+                              <Font size="26.0" />
+                           </font></Button>
+                        <Button layoutX="14.0" layoutY="155.0" mnemonicParsing="false" onAction="#setMultiple" prefHeight="60.0" prefWidth="60.0" styleClass="multiple" text="7" textFill="WHITE">
+                           <font>
+                              <Font size="26.0" />
+                           </font></Button>
+                        <Button layoutX="157.0" layoutY="84.0" mnemonicParsing="false" onAction="#setMultiple" prefHeight="60.0" prefWidth="60.0" styleClass="multiple" text="6" textFill="WHITE">
+                           <font>
+                              <Font size="26.0" />
+                           </font></Button>
+                        <Button layoutX="86.0" layoutY="84.0" mnemonicParsing="false" onAction="#setMultiple" prefHeight="60.0" prefWidth="60.0" styleClass="multiple" text="5" textFill="WHITE">
+                           <font>
+                              <Font size="26.0" />
+                           </font></Button>
+                        <Button layoutX="14.0" layoutY="84.0" mnemonicParsing="false" onAction="#setMultiple" prefHeight="60.0" prefWidth="60.0" styleClass="multiple" text="4" textFill="WHITE">
+                           <font>
+                              <Font size="26.0" />
+                           </font></Button>
+                        <Button layoutX="157.0" layoutY="14.0" mnemonicParsing="false" onAction="#setMultiple" prefHeight="60.0" prefWidth="60.0" styleClass="multiple" text="3" textFill="WHITE">
+                           <font>
+                              <Font size="26.0" />
+                           </font></Button>
+                        <Button layoutX="86.0" layoutY="14.0" mnemonicParsing="false" onAction="#setMultiple" prefHeight="60.0" prefWidth="60.0" styleClass="multiple" text="2" textFill="WHITE">
+                           <font>
+                              <Font size="26.0" />
+                           </font></Button>
+                        <Button layoutX="86.0" layoutY="222.0" mnemonicParsing="false" onAction="#resetMultiple" prefHeight="60.0" prefWidth="60.0" styleClass="multiple" text="X" textFill="RED">
+                           <font>
+                              <Font name="System Bold" size="29.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="14.0" layoutY="223.0" mnemonicParsing="false" onAction="#setMultiple" prefHeight="60.0" prefWidth="60.0" styleClass="multiple" text="1/4" textFill="WHITE">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="157.0" layoutY="223.0" mnemonicParsing="false" onAction="#setMultiple" prefHeight="60.0" prefWidth="60.0" styleClass="multiple" text="1/2" textFill="WHITE">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </Pane>
+                  <ChoiceBox fx:id="ch" layoutX="805.0" layoutY="380.0" prefHeight="79.0" prefWidth="72.0" />
+                  <Button layoutX="588.0" layoutY="627.0" mnemonicParsing="false" onAction="#endOrder" prefHeight="71.0" prefWidth="133.0" styleClass="endOrder" text="انهاء الاوردر" textFill="WHITE">
                      <font>
-                        <Font name="System Bold" size="18.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="338.0" layoutY="53.0" text="Name">
-                     <font>
-                        <Font name="System Bold" size="18.0" />
-                     </font>
-                  </Label>
-                  <DatePicker fx:id="date" layoutX="485.0" layoutY="87.0" onMouseClicked="#normalizeDate" prefHeight="40.0" prefWidth="188.0" />
-                  <Label layoutX="559.0" layoutY="53.0" text="Date">
-                     <font>
-                        <Font name="System Bold" size="18.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="523.0" text="Add Appointment">
-                     <font>
-                        <Font name="System Bold Italic" size="36.0" />
-                     </font>
-                  </Label>
-                  <TextField fx:id="timeH" layoutX="708.0" layoutY="88.0" onMouseClicked="#normalizeTimeH" prefHeight="40.0" prefWidth="38.0" />
-                  <ChoiceBox fx:id="ch" layoutX="823.0" layoutY="87.0" onMouseClicked="#normalizeCh" prefHeight="41.0" prefWidth="40.0" />
-                  <TextField fx:id="timeM" layoutX="769.0" layoutY="87.0" onMouseClicked="#normalizeTimeM" prefHeight="40.0" prefWidth="38.0" />
-                  <Label layoutX="752.0" layoutY="78.0" text=":">
-                     <font>
-                        <Font name="System Bold" size="36.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="768.0" layoutY="53.0" text="Time">
-                     <font>
-                        <Font name="System Bold" size="18.0" />
-                     </font>
-                  </Label>
-               </children>
-            </Pane>
-            <Pane id="services" prefHeight="458.0" prefWidth="1416.0">
-               <children>
-                  <Label layoutX="7.0" layoutY="40.0" text="Availabe Services">
-                     <font>
-                        <Font name="System Bold Italic" size="24.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="14.0" layoutY="234.0" prefHeight="35.0" prefWidth="82.0" text="Added">
-                     <font>
-                        <Font name="System Bold Italic" size="24.0" />
-                     </font>
-                  </Label>
-                  <ListView fx:id="Added" layoutX="5.0" layoutY="269.0" prefHeight="192.0" prefWidth="1345.0" styleClass="services" />
-                  <ScrollPane fx:id="buttonContainer" hbarPolicy="NEVER" layoutX="5.0" layoutY="81.0" prefHeight="153.0" prefWidth="1336.0" />
-               </children></Pane>
-            <Pane prefHeight="328.0" prefWidth="1416.0">
-               <children>
-                  <Button layoutX="436.0" layoutY="174.0" mnemonicParsing="false" onAction="#onSubmit" prefHeight="69.0" prefWidth="206.0" text="Submit">
-                     <font>
-                        <Font name="System Bold" size="36.0" />
+                        <Font name="System Bold" size="22.0" />
                      </font>
                   </Button>
-                  <TextField fx:id="price" layoutX="16.0" layoutY="101.0" onMouseClicked="#normalizePrice" prefHeight="43.0" prefWidth="177.0" />
-                  <Label layoutX="26.0" layoutY="58.0" text="Total Amount">
+                  <TableView fx:id="selectedItemsTable" layoutX="14.0" layoutY="469.0" prefHeight="232.0" prefWidth="432.0">
+                    <columns>
+                      <TableColumn fx:id="nameColumn" prefWidth="341.5998411178589" text="الاسم" />
+                      <TableColumn fx:id="quantityColumn" prefWidth="91.2001953125" text="العدد" />
+                    </columns>
+                  </TableView>
+                  <Button layoutX="14.0" layoutY="701.0" mnemonicParsing="false" onAction="#deleteSelectedItem" prefHeight="43.0" prefWidth="97.0" text="ازالة" textFill="#ef0000">
                      <font>
-                        <Font name="System Bold" size="24.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="202.0" layoutY="105.0" text="LE">
-                     <font>
-                        <Font name="System Bold" size="24.0" />
-                     </font>
-                  </Label>
-                  <TextField fx:id="tips" layoutX="235.0" layoutY="101.0" prefHeight="43.0" prefWidth="177.0" />
-                  <Label layoutX="423.0" layoutY="105.0" text="LE">
-                     <font>
-                        <Font name="System Bold" size="24.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="299.0" layoutY="58.0" text="TIPS">
-                     <font>
-                        <Font name="System Bold" size="24.0" />
-                     </font>
-                  </Label>
-                  <Button fx:id="deleteButton" layoutX="1178.0" layoutY="65.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="117.0" text="Delete" textFill="#f20000">
-                     <font>
-                        <Font name="System Bold" size="24.0" />
+                        <Font name="System Bold" size="16.0" />
                      </font>
                   </Button>
+                  <Button layoutX="133.0" layoutY="701.0" mnemonicParsing="false" onAction="#editSelectedItem" prefHeight="43.0" prefWidth="97.0" text="تعديل">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Button>
+                  <ChoiceBox fx:id="chPayment" layoutX="887.0" layoutY="380.0" prefHeight="79.0" prefWidth="72.0" />
+                  <ChoiceBox fx:id="chTableNum" layoutX="971.0" layoutY="380.0" prefHeight="79.0" prefWidth="72.0" />
+                  <Label layoutX="812.0" layoutY="355.0" text="نوع الاوردر" />
+                  <Label layoutX="889.0" layoutY="355.0" text="طريقة الدفع" />
+                  <Label layoutX="976.0" layoutY="355.0" text="رقم الترابيزة" />
+                  <TextField fx:id="address" layoutX="812.0" layoutY="524.0" prefHeight="35.0" prefWidth="238.0" />
+                  <Label layoutX="1076.0" layoutY="528.0" text="العنوان">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="mobileNum" layoutX="812.0" layoutY="596.0" prefHeight="35.0" prefWidth="238.0" />
+                  <Label layoutX="1063.0" layoutY="600.0" text="رقم الهاتف">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="name" layoutX="811.0" layoutY="462.0" prefHeight="35.0" prefWidth="238.0" />
+                  <Label layoutX="1076.0" layoutY="466.0" text="الاسم">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="comment" layoutX="456.0" layoutY="462.0" prefHeight="35.0" prefWidth="238.0" />
+                  <Label layoutX="718.0" layoutY="466.0" text="اضافات">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="659.0" layoutY="583.0" text="الاجمالي">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="priceLabel" layoutX="573.0" layoutY="583.0" text="0">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="497.0" layoutY="583.0" text="LE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
                </children>
             </Pane>
          </children>

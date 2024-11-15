@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.AppointmentsPopupController">
+    <ListView fx:id="appointmentsListView" />
+   <Pane prefHeight="136.0" prefWidth="248.0">
+      <children>
+         <Label layoutX="188.0" layoutY="1.0" text="الاجمالي">
+            <font>
+               <Font name="System Bold" size="16.0" />
+            </font>
+         </Label>
+         <Label layoutX="201.0" layoutY="35.0" text="الاعلى">
+            <font>
+               <Font name="System Bold" size="16.0" />
+            </font>
+         </Label>
+         <Label layoutX="205.0" layoutY="68.0" text="الاقل">
+            <font>
+               <Font name="System Bold" size="16.0" />
+            </font>
+         </Label>
+         <Label layoutX="186.0" layoutY="103.0" text="المتوسط">
+            <font>
+               <Font name="System Bold" size="16.0" />
+            </font>
+         </Label>
+         <Label fx:id="totalLabel" layoutX="25.0" layoutY="4.0" text="0">
+            <font>
+               <Font name="System Bold" size="16.0" />
+            </font>
+         </Label>
+         <Label fx:id="maxLabel" layoutX="27.0" layoutY="38.0" text="0">
+            <font>
+               <Font name="System Bold" size="16.0" />
+            </font>
+         </Label>
+         <Label fx:id="minLabel" layoutX="27.0" layoutY="71.0" text="0">
+            <font>
+               <Font name="System Bold" size="16.0" />
+            </font>
+         </Label>
+         <Label fx:id="avgLabel" layoutX="27.0" layoutY="103.0" text="0">
+            <font>
+               <Font name="System Bold" size="16.0" />
+            </font>
+         </Label>
+         <Label layoutX="116.0" layoutY="4.0" text="LE">
+            <font>
+               <Font name="System Bold" size="16.0" />
+            </font>
+         </Label>
+         <Label layoutX="115.0" layoutY="38.0" text="LE">
+            <font>
+               <Font name="System Bold" size="16.0" />
+            </font>
+         </Label>
+         <Label layoutX="116.0" layoutY="71.0" text="LE">
+            <font>
+               <Font name="System Bold" size="16.0" />
+            </font>
+         </Label>
+         <Label layoutX="115.0" layoutY="106.0" text="LE">
+            <font>
+               <Font name="System Bold" size="16.0" />
+            </font>
+         </Label>
+      </children>
+   </Pane>
+</VBox>

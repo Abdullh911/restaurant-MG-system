@@ -1,25 +1,83 @@
 package com.example.demo1;
 
-import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Appointment {
-    String time;
+    private String payment;
+    private String tableNumber;
+    private String date;
+    private String address;
+    private String nameCustomer;
+    private double price;
+    private HashMap<String, Number> selectedServices = new HashMap<>();
+    private String number;
+    private String name;
+    private String id;
+    private String time;
+    private String comment;
+    private String type;
 
-    public String getTime() {
-        return time;
+    public Appointment() {
+        this.comment = ""; // Default value for the comment field
     }
 
-    public void setTime(String time) {
-        this.time = time;
+    // Getters and Setters
+
+    public String getPayment() {
+        return payment;
     }
 
-    String Date;
-    int Price;
-    ArrayList<String>selectedServices;
-    String Number;
-    String Name;
-    int tip;
-    String id;
+    public void setPayment(String payment) {
+        this.payment = payment;
+    }
+
+    public String getTableNumber() {
+        return tableNumber;
+    }
+
+    public void setTableNumber(String tableNumber) {
+        this.tableNumber = tableNumber;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public HashMap<String, Number> getSelectedServices() {
+        return selectedServices;
+    }
+
+    public void setSelectedServices(HashMap<String, Number> selectedServices) {
+        this.selectedServices = selectedServices;
+    }
+
+    public String getNumber() {
+        return number;
+    }
+
+    public void setNumber(String number) {
+        this.number = number;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 
     public String getId() {
         return id;
@@ -29,65 +87,62 @@ public class Appointment {
         this.id = id;
     }
 
-    public int getTip() {
-        return tip;
+    public String getTime() {
+        return time;
     }
 
-    public void setTip(int tip) {
-        this.tip = tip;
+    public void setTime(String time) {
+        this.time = time;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getNameCustomer() {
+        return nameCustomer;
+    }
+
+    public void setNameCustomer(String nameCustomer) {
+        this.nameCustomer = nameCustomer;
+    }
+
+    public String getComment() {
+        return comment;
+    }
+
+    public void setComment(String comment) {
+        this.comment = comment;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 
     @Override
     public String toString() {
         return "Appointment{" +
-                "time='" + time + '\'' +
-                ", Date='" + Date + '\'' +
-                ", Price=" + Price +
+                "payment='" + payment + '\'' +
+                ", tableNumber='" + tableNumber + '\'' +
+                ", date='" + date + '\'' +
+                ", address='" + address + '\'' +
+                ", nameCustomer='" + nameCustomer + '\'' +
+                ", price=" + price +
                 ", selectedServices=" + selectedServices +
-                ", Number='" + Number + '\'' +
-                ", Name='" + Name + '\'' +
-                ", tip=" + tip +
-                ", id=" + id +
+                ", number='" + number + '\'' +
+                ", name='" + name + '\'' +
+                ", id='" + id + '\'' +
+                ", time='" + time + '\'' +
+                ", comment='" + comment + '\'' +
+                ", type='" + type + '\'' +
                 '}';
-    }
-
-    public String getDate() {
-        return Date;
-    }
-
-    public void setDate(String date) {
-        Date = date;
-    }
-
-    public int getPrice() {
-        return Price;
-    }
-
-    public void setPrice(int price) {
-        Price = price;
-    }
-
-    public ArrayList<String> getSelectedServices() {
-        return selectedServices;
-    }
-
-    public void setSelectedServices(ArrayList<String> selectedServices) {
-        this.selectedServices = selectedServices;
-    }
-
-    public String getNumber() {
-        return Number;
-    }
-
-    public void setNumber(String number) {
-        Number = number;
-    }
-
-    public String getName() {
-        return Name;
-    }
-
-    public void setName(String name) {
-        Name = name;
     }
 }

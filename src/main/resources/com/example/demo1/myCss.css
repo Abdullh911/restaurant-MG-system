@@ -12,7 +12,7 @@
     -fx-background-color: #DC143C;
 }
 #sidebar{
-    -fx-background-color:#ae362e;
+    -fx-background-color:#e89015;
     -fx-background-radius:0px 15px 15px 0px;
 }
 .services{
@@ -26,4 +26,30 @@
 }
 .service-button:hover {
     -fx-background-color: #E34234;
+}
+/* Style for category buttons */
+.category-button {
+    -fx-background-color: #4CAF50; /* Green background */
+    -fx-text-fill: white; /* White text color */
+    -fx-font-size: 16px; /* Font size */
+    -fx-padding: 10px; /* Padding around the text */
+    -fx-alignment: center; /* Center align text */
+    -fx-pref-width: 200px; /* Preferred width */
+}
+
+/* Style for item buttons */
+.item-button {
+    -fx-background-color: #2196F3; /* Blue background */
+    -fx-text-fill: white; /* White text color */
+    -fx-font-size: 14px; /* Font size */
+    -fx-padding: 5px 10px; /* Padding (vertical, horizontal) */
+    -fx-min-width: 50px; /* Minimum width */
+    -fx-max-width: 300px; /* Maximum width */
+    -fx-pref-height: 40px; /* Preferred height */
+}
+.multiple{
+    -fx-background-color:#2c479d;
+}
+.endOrder{
+    -fx-background-color:green;
 }
